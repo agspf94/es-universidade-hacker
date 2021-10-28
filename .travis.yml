@@ -2,6 +2,8 @@ language: ruby
 rvm:
   - 2.7.1
 before_install:
+  - bundle config set --local deployment 'true'
+  - bundle config --local deployment true
   - gem install bundler:2.2.30
 script:
   - bundle update --bundler
