@@ -2,9 +2,8 @@ language: ruby
 rvm:
   - 2.7.1
 before_install:
-  - bundle config set --local deployment 'true'
   - gem install bundler:2.2.21
-  - bundle install --jobs 3 --retry 3
+  - bundle config set --local deployment 'true'
 script:
   - bundle exec rake db:migrate
   - bundle exec cucumber
