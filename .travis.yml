@@ -5,7 +5,7 @@ before_install:
   - bundle config set --local deployment 'true'
   - bundle config --local deployment true
   - gem install bundler:2.2.21
-  - bundle install --quiet --jobs 4
+  - bundle install --jobs 3 --retries 3
 script:
   - bundle exec rake db:migrate
   - bundle exec cucumber
