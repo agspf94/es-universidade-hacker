@@ -1,2 +1,18 @@
 <h1>Menu Principal</h1>
-<button type="button" name="Novo Jogo" onclick="">Click Me!</button>
+<%=link_to '<p class = "btn default">Novo Jogo</p>'.html_safe,:action => "jogo"%><br><br>
+<%=link_to '<p class = "btn default">Cadastrar Usuário</p>'.html_safe,:action => "index"%><br><br>
+<%=link_to '<p class = "btn default">Logout</p>'.html_safe,:action => "index"%><br><br>
+<style>
+    .btn {
+        border: none;
+        background-color: #A9A9A9;
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    .btn:hover {background: #808080;}
+
+    .default {color: black;}
+</style>
