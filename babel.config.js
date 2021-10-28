@@ -22,7 +22,8 @@ module.exports = function(api) {
         {
           targets: {
             node: 'current'
-          }
+          },
+          loose: true
         }
       ],
       (isProductionEnv || isDevelopmentEnv) && [
@@ -32,7 +33,8 @@ module.exports = function(api) {
           useBuiltIns: 'entry',
           corejs: 3,
           modules: false,
-          exclude: ['transform-typeof-symbol']
+          exclude: ['transform-typeof-symbol'],
+          loose: true
         }
       ]
     ].filter(Boolean),
@@ -40,6 +42,8 @@ module.exports = function(api) {
       'babel-plugin-macros',
       '@babel/plugin-syntax-dynamic-import',
       isTestEnv && 'babel-plugin-dynamic-import-node',
+      ["@babel/plugin-proposal-private-methods", { "loose": true }],
+      ["@babel/plugin-proposal-private-property-in-object", { "loose": true }],
       '@babel/plugin-transform-destructuring',
       [
         '@babel/plugin-proposal-class-properties',
@@ -50,7 +54,8 @@ module.exports = function(api) {
       [
         '@babel/plugin-proposal-object-rest-spread',
         {
-          useBuiltIns: true
+          useBuiltIns: true,
+          loose: true
         }
       ],
       [
@@ -58,13 +63,15 @@ module.exports = function(api) {
         {
           helpers: false,
           regenerator: true,
-          corejs: false
+          corejs: false,
+          loose: true
         }
       ],
       [
         '@babel/plugin-transform-regenerator',
         {
-          async: false
+          async: false,
+          loose: true
         }
       ]
     ].filter(Boolean)
