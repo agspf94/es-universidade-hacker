@@ -4,7 +4,7 @@ rvm:
 before_install:
   - bundle config set --local deployment 'true'
   - bundle config --local deployment true
-  - gem install bundler:2.2.21
+  - gem install bundler:2.2.30
 script:
   - bundle exec rake db:migrate
   - bundle exec rspec spec
