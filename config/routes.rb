@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :alunos
+  resources :usuarios
   root 'welcome#index'
   resources :menu_principal, only: [:index] do
     collection do
