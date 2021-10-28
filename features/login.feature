@@ -10,7 +10,7 @@ Cenario: Login de usuario com sucesso
   Quando preencho o campo de "Email" com "teste@gmail.com"
   Quando preencho o campo de "Senha" com "qwe123"
   E clico em Entrar
-  Entao devo receber a mensagem "Aluno Logado"
+  Entao devo receber a mensagem "Usuario Logado"
 
 Cenario: Login de usuario com erro - e-mail vazio
   Dado que eu estou na pagina de login

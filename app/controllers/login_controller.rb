@@ -7,9 +7,9 @@ class LoginController < ApplicationController
     elsif (:Senha.empty?)
       render js: "alert('É obrigatório informar a senha!');"
     else
-      aluno = Aluno.find_by_email(params[:aluno])
-      if(aluno)
-        render js: "alert('Aluno Logado');"
+      usuario = Usuario.find_by_email(params[:aluno])
+      if(usuario)
+        render js: "alert('Usuario Logado');"
       else
         render js: "alert('Email/Senha inválido!');"
       end
