@@ -4,11 +4,12 @@ rvm:
 before_install:
   - bundle config set --local deployment 'true'
   - bundle config --local deployment true
-  - gem install bundler:2.2.30
+  - gem install bundler:2.2.21
+  - bundle install --quiet --jobs 4
 script:
   - bundle exec rake db:migrate
-  - bundle exec rspec spec
   - bundle exec cucumber
+  - bundle exec rspec
 branches:
   only:
     - master
