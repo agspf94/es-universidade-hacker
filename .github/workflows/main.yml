@@ -37,3 +37,5 @@ jobs:
         run: |
           bundle exec rails db:prepare
           bundle exec rake
+          cucumber
+          rspec
