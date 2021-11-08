@@ -1,0 +1,17 @@
+<h1>Login</h1>
+
+<%= form_with scope: :login, url: '/login', local: true do |form| %>
+  <p>
+    <%= form.label :Email %><br>
+    <%= form.text_field :Email %>
+  </p>
+
+  <p>
+    <%= form.label :Senha %><br>
+    <%= form.text_field :Senha %>
+  </p>
+
+  <p>
+    <%= form.submit 'Entrar' %>
+  </p>
+<% end %>
