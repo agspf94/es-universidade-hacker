@@ -5,14 +5,18 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-  workflow_dispatch:
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     services:
       db:
-        image: postgres:11
+        image: postgres:14
+        env:
+          POSTGRES_HOST: localhost
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: envsignal_test
         ports: ['5432:5432']
         options: >-
           --health-cmd pg_isready
@@ -21,7 +25,6 @@ jobs:
           --health-retries 5
     steps:
       - uses: actions/checkout@v2
-
       - name: Setup Ruby
         uses: actions/setup-ruby@v1
         with:
