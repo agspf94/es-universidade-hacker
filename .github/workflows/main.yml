@@ -1,9 +1,9 @@
 name: Build
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -23,17 +23,23 @@ jobs:
           --health-retries 5
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Ruby
+      - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7.4
           bundler-cache: true
-      - name: Run tests
+      - name: Build and run tests
         env:
           DATABASE_URL: postgres://postgres:@localhost:5432/test
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
           RAILS_ENV: test
         run: |
+          sudo apt-get -yqq install libpq-dev
+          gem install bundler
+          bundler install --jobs 4 --retry 3
           bundle exec rails db:prepare
           bundle exec rake
+          bundle exec rails test
+          cucumber
+          rspec
