@@ -1,5 +1,5 @@
 # Engenharia de Software - Universidade Hacker
-[![build](https://github.com/agspf94/es-universidade-hacker/actions/workflows/main.yml/badge.svg)](https://github.com/agspf94/es-universidade-hacker/actions/workflows/main.yml)
+[![Build](https://github.com/agspf94/es-universidade-hacker/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/agspf94/es-universidade-hacker/actions/workflows/main.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/b1663227c5e0583626bf/maintainability)](https://codeclimate.com/github/agspf94/es-universidade-hacker/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b1663227c5e0583626bf/test_coverage)](https://codeclimate.com/github/agspf94/es-universidade-hacker/test_coverage)
 
