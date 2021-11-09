@@ -1,5 +1,15 @@
 <h1>Pergunta 1</h1>
-<!--<%#=link_to '<p class = "btn default">Novo Jogo</p>'.html_safe,:action => "jogo"%><br><br>-->
+<p>Enunciado</p>
+<br>
+<input type="radio" id="alternativa1" name="alternativas" value="alternativa1">
+<label for="alternativa1">alternativa1</label><br>
+<input type="radio" id="alternativa2" name="alternativas" value="alternativa2">
+<label for="alternativa2">alternativa2</label><br>
+<input type="radio" id="alternativa3" name="alternativas" value="alternativa3">
+<label for="alternativa3">alternativa3</label><br>
+<input type="radio" id="alternativa4" name="alternativas" value="alternativa4">
+<label for="alternativa4">alternativa4</label><br>
+<%=link_to '<p class = "btn default">Finalizar</p>'.html_safe,:action => "resultado"%>
 <style>
     .btn {
         border: none;

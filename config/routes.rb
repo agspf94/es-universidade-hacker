@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  resources :partida
   resources :usuarios
-  resources :menu_principal, only: [:index] do
+  resources :menu_principal
+  resources :partida, only: [:index] do
     collection do
-      get :partida
+      get :resultado
     end
   end
   #resources :jogo, only: [:index]
