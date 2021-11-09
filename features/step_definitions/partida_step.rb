@@ -11,7 +11,7 @@ Então('serei redirecionado para {string}') do |string|
 end
 
 Dado('que iniciei uma partida corretamente') do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit '/partida'
 end
 
 Dado('recebi a primeira questão do jogo') do
