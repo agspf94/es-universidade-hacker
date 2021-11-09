@@ -15,27 +15,27 @@ Dado('que iniciei uma partida corretamente') do
 end
 
 Dado('recebi a primeira questão do jogo') do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_content 'Enunciado'
 end
 
-Dado('selecionei a alternativa correta como respota') do
-  pending # Write code here that turns the phrase above into concrete actions
+Dado('selecionei a alternativa correta como resposta') do
+  choose("alternativa1")
 end
 
 Quando('cliquei em {string}') do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+  click_on 'Finalizar'
 end
 
 Então('deverei ser redirecionado para a página {string}') do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_content 'Resultado'
 end
 
-Então('deverei ver uma mensagem com a pontuação igual {string}') do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+Então('deverei ver uma mensagem com a pontuação igual {int}') do |int|
+  expect(page).to have_content "Pontuacao: #{int}"
 end
 
-Dado('selecionei uma alternativa incorreta como respota') do
-  pending # Write code here that turns the phrase above into concrete actions
+Dado('selecionei uma alternativa incorreta como resposta') do
+  choose("alternativa2")
 end
 
 Dado('não selecionei uma alternativa como respota') do

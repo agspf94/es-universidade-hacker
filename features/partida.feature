@@ -15,18 +15,18 @@ Cenário: Iniciar corretamente a partida
 Cenário: Iniciar a partida e responder a questão corretamente
   Dado que iniciei uma partida corretamente
   E recebi a primeira questão do jogo
-  E selecionei a alternativa correta como respota
+  E selecionei a alternativa correta como resposta
   Quando cliquei em "finalizar"
   Então deverei ser redirecionado para a página "resultado"
-  Então deverei ver uma mensagem com a pontuação igual "1"
+  Então deverei ver uma mensagem com a pontuação igual 1
 
 Cenário: Iniciar a partida e responder a questão incorretamente
   Dado que iniciei uma partida corretamente
   E recebi a primeira questão do jogo
-  E selecionei uma alternativa incorreta como respota
+  E selecionei uma alternativa incorreta como resposta
   Quando cliquei em "finalizar"
   Então deverei ser redirecionado para a página "resultado"
-  Então deverei ver uma mensagem com a pontuação igual "0"
+  Então deverei ver uma mensagem com a pontuação igual 0
 
 Cenário: Iniciar a partida e não responder a questão
   Dado que iniciei uma partida corretamente
