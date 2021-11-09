@@ -1,0 +1,2 @@
+class PartidaController < ApplicationController
+end
