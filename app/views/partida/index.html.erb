@@ -10,13 +10,13 @@
 <!--<label for="alternativa4">alternativa4</label><br>-->
 <%#=link_to '<p class = "btn default">Finalizar</p>'.html_safe,:action => "resultado", :answer => 12 %>
 <%= form_with scope: :partida, url: "/partida/resultado", local: true do |form| %>
-  <%= form.radio_button :alternativas, "alternativa1" %>
+  <%= form.radio_button :alternativas, "1" %>
   <%= form.label :alternativa1, "alternativa1" %><br><br>
-  <%= form.radio_button :alternativas, "alternativa2" %>
+  <%= form.radio_button :alternativas, "0" %>
   <%= form.label :alternativa2, "alternativa2" %><br><br>
-  <%= form.radio_button :alternativas, "alternativa3" %>
+  <%= form.radio_button :alternativas, "0" %>
   <%= form.label :alternativa3, "alternativa3" %><br><br>
-  <%= form.radio_button :alternativas, "alternativa4" %>
+  <%= form.radio_button :alternativas, "0" %>
   <%= form.label :alternativa4, "alternativa4" %><br><br>
   <%= form.submit "Finalizar" %>
 <% end %>
