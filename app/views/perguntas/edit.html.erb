@@ -1,0 +1,39 @@
+<%= form_for @perguntas do |f| %>
+
+<!--  <label>Enunciado:</label><br>-->
+<!--  <%#= text_field_tag :enunciado %><br>-->
+
+<!--  <label>Alternativa A</label><br>-->
+<!--  <%#= text_area_tag :alternativa_a %><br>-->
+<!--  <label>Alternativa B</label><br>-->
+<!--  <%#= text_area_tag :alternativa_b %><br>-->
+<!--  <label>Alternativa C</label><br>-->
+<!--  <%#= text_area_tag :alternativa_c %><br>-->
+<!--  <label>Alternativa D</label><br>-->
+<!--  <%#= text_area_tag :alternativa_d %><br>-->
+<!--  <label>Alternativa correta</label><br>-->
+<!--  <%#= text_area_tag :alternativa_correta %><br>-->
+
+  <%#= submit_tag "Salvar a(s) mudança(s)" %>
+
+  <%= f.label 'Enunciado' %><br>
+  <%= f.text_field :enunciado %><br>
+
+  <%= f.label 'Alternativa A' %><br>
+  <%= f.text_area :alternativa_a %><br>
+
+  <%= f.label 'Alternativa B' %><br>
+  <%= f.text_area :alternativa_b %><br>
+
+  <%= f.label 'Alternativa C' %><br>
+  <%= f.text_area :alternativa_c %><br>
+
+  <%= f.label 'Alternativa D' %><br>
+  <%= f.text_area :alternativa_d %><br>
+
+  <%= f.label 'Alternativa correta' %><br>
+  <%= f.text_area :alternativa_correta %><br>
+
+  <%= f.submit "Salvar a(s) mudança(s)" %>
+
+<% end %>

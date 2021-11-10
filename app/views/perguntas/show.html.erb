@@ -1,0 +1,33 @@
+<p>
+  <strong>Enunciado:</strong>
+  <%= @perguntas.enunciado %>
+</p>
+
+<p>
+  <strong>Alternativa A:</strong>
+  <%= @perguntas.alternativa_a %>
+</p>
+
+<p>
+  <strong>Alternativa B:</strong>
+  <%= @perguntas.alternativa_b %>
+</p>
+
+<p>
+  <strong>Alternativa C:</strong>
+  <%= @perguntas.alternativa_c %>
+</p>
+
+<p>
+  <strong>Alternativa D:</strong>
+  <%= @perguntas.alternativa_d %>
+</p>
+
+<p>
+  <strong>Alternativa correta:</strong>
+  <%= @perguntas.alternativa_correta %>
+</p>
+
+<%= link_to "Delete", @perguntas, method: :delete, data: {confirm: "Deseja apagar o enunciado?"} %>
+<br>
+<%= link_to "Edit", '/perguntas/' + @perguntas.id.to_s + '/edit' %>
