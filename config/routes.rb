@@ -5,8 +5,11 @@ Rails.application.routes.draw do
       get:jogo
     end
   end
+  #post "/menu_principal" => "menu_principal#index"
   #resources :jogo, only: [:index]
+
   resources :login
   get '/login/is_user' => 'login#is_user'
+  post '/login/create' => 'login#create'
   root 'login#new'
 end
