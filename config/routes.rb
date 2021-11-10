@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   resources :usuarios
-  resources :menu_principal, only: [:index] do
+  resources :menu_principal
+  resources :partida, only: [:index] do
     collection do
-      get:jogo
+      get :resultado
+      post :resultado
     end
   end
   #post "/menu_principal" => "menu_principal#index"
