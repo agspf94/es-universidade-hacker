@@ -37,11 +37,3 @@ end
 Dado('selecionei uma alternativa incorreta como resposta') do
   choose("alternativa2")
 end
-
-Dado('não selecionei uma alternativa como resposta') do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Então('deverei ver uma mensagem de erro: {string}') do |string|
-  pending # Write code here that turns the phrase above into concrete actions
-end

@@ -27,10 +27,3 @@ Cenário: Iniciar a partida e responder a questão incorretamente
   Quando cliquei em "finalizar"
   Então deverei ser redirecionado para a página "resultado"
   Então deverei ver uma mensagem com a pontuação igual 0
-
-Cenário: Iniciar a partida e não responder a questão
-  Dado que iniciei uma partida corretamente
-  E recebi a primeira questão do jogo
-  E não selecionei uma alternativa como resposta
-  Quando cliquei em "finalizar"
-  Então deverei ver uma mensagem de erro: "Você precisa selecionar uma alternativa para continuar!"

@@ -10,7 +10,7 @@
 <!--<label for="alternativa4">alternativa4</label><br>-->
 <%#=link_to '<p class = "btn default">Finalizar</p>'.html_safe,:action => "resultado", :answer => 12 %>
 <%= form_with scope: :partida, url: "/partida/resultado", local: true do |form| %>
-  <%= form.radio_button :alternativas, "1", id: "alternativa1" %>
+  <%= form.radio_button :alternativas, "1", id: "alternativa1", :checked => true %>
   <%= form.label :alternativa1, "alternativa1", id: "alternativa1" %><br><br>
   <%= form.radio_button :alternativas, "0", id: "alternativa2" %>
   <%= form.label :alternativa2, "alternativa2", id: "alternativa2" %><br><br>
