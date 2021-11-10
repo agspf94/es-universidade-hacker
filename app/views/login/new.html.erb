@@ -1,17 +1,21 @@
 <h1>Login</h1>
 
-<%= form_with scope: :login, url: '/login', local: true do |form| %>
+<%= form_with scope: :usuario, url: login_create_path, local: true do |form| %>
   <p>
-    <%= form.label :Email %><br>
-    <%= form.text_field :Email %>
+    <%= form.label :email %><br>
+    <%= form.text_field :email %>
   </p>
 
   <p>
-    <%= form.label :Senha %><br>
-    <%= form.text_field :Senha %>
+    <%= form.label :senha %><br>
+    <%= form.text_field :senha %>
   </p>
 
   <p>
     <%= form.submit 'Entrar' %>
   </p>
+<% end %>
+
+<%= form_tag new_usuario_path, method: :get do %>
+  <%= submit_tag 'Cadastrar-se' %>
 <% end %>

@@ -7,3 +7,7 @@
   <strong>Senha:</strong>
   <%= @usuario.senha %>
 </p>
+
+<%= form_tag new_login_path, method: :get do %>
+  <%= submit_tag 'Voltar ao login' %>
+<% end %>
