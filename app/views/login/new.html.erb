@@ -15,3 +15,7 @@
     <%= form.submit 'Entrar' %>
   </p>
 <% end %>
+
+<%= form_tag new_usuario_path, method: :get do %>
+  <%= submit_tag 'Cadastrar-se' %>
+<% end %>

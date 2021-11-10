@@ -17,3 +17,11 @@ end
 Quando('deixo o campo de {string} vazio') do |string|
   pending # Write code here that turns the phrase above into concrete actions
 end
+
+Quando('clico em Cadastrar-se') do
+  click_on 'Cadastrar-se'
+end
+
+Então('deverei ser redirecionado à página de cadastro') do
+  expect(page).to have_content('Novo usuario')
+end
