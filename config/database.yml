@@ -18,6 +18,7 @@ test:
   username: <%= ENV['POSTGRES_USERNAME'] || 'postgres' %>
   password: <%= ENV['POSTGRES_PASSWORD'] || 'password' %>
   database: test
+  encoding: unicode
 
 production:
   adapter: postgresql
