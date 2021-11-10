@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :partida, only: [:index] do
     collection do
       get :resultado
+      post :resultado
     end
   end
   #resources :jogo, only: [:index]

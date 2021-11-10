@@ -1,5 +1,7 @@
 <h1>Resultado</h1>
-<p>Pontuacao: 1</p><br>
+<p>Pontuacao: <%=
+  @pontuacao = params[:partida][:alternativas]
+%></p><br>
 <%=link_to '<p class = "btn default">Menu Principal</p>'.html_safe, :controller => "menu_principal" %>
 <style>
     .btn {

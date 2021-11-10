@@ -1,15 +1,25 @@
 <h1>Pergunta 1</h1>
-<p>Enunciado</p>
-<br>
-<input type="radio" id="alternativa1" name="alternativas" value="alternativa1">
-<label for="alternativa1">alternativa1</label><br>
-<input type="radio" id="alternativa2" name="alternativas" value="alternativa2">
-<label for="alternativa2">alternativa2</label><br>
-<input type="radio" id="alternativa3" name="alternativas" value="alternativa3">
-<label for="alternativa3">alternativa3</label><br>
-<input type="radio" id="alternativa4" name="alternativas" value="alternativa4">
-<label for="alternativa4">alternativa4</label><br>
-<%=link_to '<p class = "btn default">Finalizar</p>'.html_safe,:action => "resultado"%>
+<p>Enunciado</p><br>
+<!--<input type="radio" id="alternativa1" name="alternativas" value="alternativa2">-->
+<!--<label for="alternativa3">alternativa4</label><br>-->
+<!--<input type="radio" id="alternativa2" name="alternativas" value="alternativa2">-->
+<!--<label for="alternativa2">alternativa2</label><br>-->
+<!--<input type="radio" id="alternativa3" name="alternativas" value="alternativa3">-->
+<!--<label for="alternativa3">alternativa3</label><br>-->
+<!--<input type="radio" id="alternativa4" name="alternativas" value="alternativa4">-->
+<!--<label for="alternativa4">alternativa4</label><br>-->
+<%#=link_to '<p class = "btn default">Finalizar</p>'.html_safe,:action => "resultado", :answer => 12 %>
+<%= form_with scope: :partida, url: "/partida/resultado", local: true do |form| %>
+  <%= form.radio_button :alternativas, "alternativa1" %>
+  <%= form.label :alternativa1, "alternativa1" %><br><br>
+  <%= form.radio_button :alternativas, "alternativa2" %>
+  <%= form.label :alternativa2, "alternativa2" %><br><br>
+  <%= form.radio_button :alternativas, "alternativa3" %>
+  <%= form.label :alternativa3, "alternativa3" %><br><br>
+  <%= form.radio_button :alternativas, "alternativa4" %>
+  <%= form.label :alternativa4, "alternativa4" %><br><br>
+  <%= form.submit "Finalizar" %>
+<% end %>
 <style>
     .btn {
         border: none;
@@ -24,3 +34,6 @@
 
     .default {color: black;}
 </style>
+<script>
+
+</script>

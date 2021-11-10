@@ -31,6 +31,6 @@ Cenário: Iniciar a partida e responder a questão incorretamente
 Cenário: Iniciar a partida e não responder a questão
   Dado que iniciei uma partida corretamente
   E recebi a primeira questão do jogo
-  E não selecionei uma alternativa como respota
+  E não selecionei uma alternativa como resposta
   Quando cliquei em "finalizar"
   Então deverei ver uma mensagem de erro: "Você precisa selecionar uma alternativa para continuar!"
