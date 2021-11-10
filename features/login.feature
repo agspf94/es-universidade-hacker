@@ -7,10 +7,11 @@ Eu quero logar em minha conta
 
 Cenario: Login de usuario com sucesso
   Dado que eu estou na pagina de login
+  E que eu tenho um usuário com "Email" cadastrado "teste@gmail.com" e "Senha" cadastrada "qwe123"
   Quando preencho o campo de "Email" com "teste@gmail.com"
   Quando preencho o campo de "Senha" com "qwe123"
   E clico em Entrar
-  Entao devo receber a mensagem "Usuario Logado"
+  Entao devo receber a mensagem "Menu Principal"
 
 Cenario: Login de usuario com erro - e-mail vazio
   Dado que eu estou na pagina de login
@@ -37,3 +38,8 @@ Cenario: Cadastro de aluno com erro - senha inválida
   E preencho o campo de "Senha" com "woe10"
   E clico em Entrar
   Entao deverei ver a mensagem de erro "Email/Senha inválido!"
+
+Cenario: Ir para a página de cadastro
+  Dado que eu estou na pagina de login
+  Quando clico em Cadastrar-se
+  Entao deverei ser redirecionado à página de cadastro

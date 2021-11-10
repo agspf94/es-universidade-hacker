@@ -1,3 +1,10 @@
+Dado('que eu tenho um usuário com "Email" cadastrado {string} e "Senha" cadastrada {string}') do |usuario_email, usuario_senha|
+  usuario = Usuario.new
+  usuario.email = usuario_email
+  usuario.senha = usuario_senha
+  usuario.save
+end
+
 Dado('que eu estou na pagina de login') do
   visit '/login/new'
 end
@@ -16,4 +23,12 @@ end
 
 Quando('deixo o campo de {string} vazio') do |string|
   pending # Write code here that turns the phrase above into concrete actions
+end
+
+Quando('clico em Cadastrar-se') do
+  click_on 'Cadastrar-se'
+end
+
+Então('deverei ser redirecionado à página de cadastro') do
+  expect(page).to have_content('Novo usuario')
 end
