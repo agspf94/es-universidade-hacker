@@ -36,6 +36,8 @@
     </td>
 
     <br>  <br>  <br>
+    <%= link_to "Delete", p, method: :delete, data: {confirm: "Deseja apagar o enunciado?"} %>
+    <br>
     <%= link_to "Edit", '/perguntas/' + p.id.to_s + '/edit' %>
 
     <br>
