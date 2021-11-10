@@ -19,7 +19,7 @@ class LoginController < ApplicationController
     #   else
     #     render js: "alert('Email/Senha inválido!);"
     #   end
-    # end
+    end
   end
   private
   def usuario_params
