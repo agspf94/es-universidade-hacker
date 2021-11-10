@@ -2,9 +2,9 @@ class LoginController < ApplicationController
   def index
   end
   def create
-    if(:Email.empty?)
+    if :Email.empty?
       render js: "alert('É obrigatório informar o e-mail!');"
-    elsif (:Senha.empty?)
+    elsif :Senha.empty?
       render js: "alert('É obrigatório informar a senha!');"
     # else
     #   #usuario = Usuario.find_by_email(params[:aluno])
