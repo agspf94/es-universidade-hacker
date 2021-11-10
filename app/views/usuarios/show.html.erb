@@ -8,6 +8,6 @@
   <%= @usuario.senha %>
 </p>
 
-<%= form_tag new_login_path, method: :get do %>
+<%= form_tag login_index_path, method: :get do %>
   <%= submit_tag 'Voltar ao login' %>
 <% end %>

@@ -6,7 +6,7 @@ Dado('que eu tenho um usuário com "Email" cadastrado {string} e "Senha" cadastr
 end
 
 Dado('que eu estou na pagina de login') do
-  visit '/login/new'
+  visit '/login'
 end
 
 Quando('preencho o campo de {string} com {string}') do |string, string2|

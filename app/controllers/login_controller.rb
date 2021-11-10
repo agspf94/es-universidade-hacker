@@ -1,5 +1,5 @@
 class LoginController < ApplicationController
-  def new
+  def index
   end
   def create
     if(:Email.empty?)

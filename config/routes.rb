@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   resources :login
   get '/login/is_user' => 'login#is_user'
   post '/login/create' => 'login#create'
-  root 'login#new'
+  root 'login#index'
 end
