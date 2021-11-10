@@ -1,3 +1,10 @@
+Dado('que eu tenho um usuário com "Email" cadastrado {string} e "Senha" cadastrada {string}') do |usuario_email, usuario_senha|
+  usuario = Usuario.new
+  usuario.email = usuario_email
+  usuario.senha = usuario_senha
+  usuario.save
+end
+
 Dado('que eu estou na pagina de login') do
   visit '/login/new'
 end
