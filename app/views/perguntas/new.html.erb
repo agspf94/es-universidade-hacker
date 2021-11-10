@@ -1,0 +1,25 @@
+
+<h1>Nova pergunta</h1>
+
+<% if @perguntas.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= @perguntas.errors.count %> erro(s) impedem que a pergunta seja salva:
+    </h2>
+    <ul>
+      <% @perguntas.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<%= form_with scope: :perguntas, url: perguntas_path, local: true do |form| %>
+  <p>
+    <%= form.label :enunciado %><br>
+    <%= form.text_field :enunciado %>
+  </p>
+
+  <p>
+    <%= form.submit 'Salvar' %>
+  </p>
+<% end %>
