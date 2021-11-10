@@ -6,6 +6,7 @@ Funcionalidade: Voltar ao login
   Para que eu possa logar no sistema com o e-mail e a senha recém cadastrados
 
   Cenário: Voltando ao login
-    Dado que estou na página de dados do usuário
+    Dado que cadastrei o usuário "exemplo@exemplo.com" com senha "1234"
+    E que estou na página de dados do usuário
     Quando clico em voltar ao login
     Então devo ser redirecionado para a página de login
