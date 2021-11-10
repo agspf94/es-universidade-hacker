@@ -14,8 +14,3 @@ Cenário: Saindo do Sistema
   Dado que estou na página de menu principal
   Quando clico em sair
   Então devo ser redirecionado para a página de login
-
-Cenário: Acessando cadastro de usuário
-  Dado que estou na página de menu principal
-  Quando clico em cadastrar usuário
-  Então devo ser redirecionado para a página de cadastro de usuário
