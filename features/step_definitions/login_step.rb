@@ -22,7 +22,7 @@ Entao('devo receber a mensagem {string}') do |string|
 end
 
 Quando('deixo o campo de {string} vazio') do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+  pending
 end
 
 Quando('clico em Cadastrar-se') do
