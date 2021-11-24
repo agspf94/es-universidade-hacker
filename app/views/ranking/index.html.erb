@@ -1,0 +1,25 @@
+<h1>Ranking</h1>
+<li>
+  <ul><b>1. </b><%= Usuario.select(:email).order(bestscore: :desc)[0][:email] %></ul>
+  <ul><b>2. </b><%= Usuario.select(:email).order(bestscore: :desc)[1][:email] %></ul>
+  <ul><b>3. </b><%= Usuario.select(:email).order(bestscore: :desc)[2][:email] %></ul>
+</li>
+<%=link_to '<p class = "btn default">Menu Principal</p>'.html_safe, :controller => "menu_principal" %>
+<br>
+<style>
+    .btn {
+        border: none;
+        background-color: #A9A9A9;
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    .btn:hover {background: #808080;}
+
+    .default {color: black;}
+</style>
+<script>
+
+</script>
