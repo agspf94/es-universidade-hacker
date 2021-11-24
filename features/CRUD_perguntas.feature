@@ -8,7 +8,7 @@ Funcionalidade: CRUD para perguntas
 Cenário: Cadastro de pergunta com sucesso
   Dado que estou na página de cadastro de pergunta
   Quando preencho o campo "Enunciado" com "1"
-  Quando preencho o campo "Alternativa A" com "2"
+  Quando preencho o campo "alternativa_a" com "2"
   Quando preencho o campo "Alternativa B" com "3"
   Quando preencho o campo "Alternativa C" com "4"
   Quando preencho o campo "Alternativa D" com "5"
