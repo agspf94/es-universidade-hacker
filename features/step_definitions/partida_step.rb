@@ -35,7 +35,7 @@ Então('deverei ser redirecionado para a página {string}') do |string|
 end
 
 Então('deverei ver uma mensagem com a pontuação igual {int}') do |int|
-  expect(page).to have_content "Pontuacao: #{int}"
+  expect(page).to have_content "Pontuação: #{int}"
 end
 
 Dado('selecionei todas as alternativas incorretas como resposta') do
