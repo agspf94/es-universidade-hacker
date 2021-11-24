@@ -22,7 +22,7 @@ Entao('devo receber a mensagem {string}') do |string|
 end
 
 Quando('deixo o campo de {string} vazio') do |string|
-  pending
+  fill_in string, :with => ""
 end
 
 Quando('clico em Cadastrar-se') do

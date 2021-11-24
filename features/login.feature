@@ -17,6 +17,7 @@ Cenario: Login de usuario com erro - e-mail vazio
   Dado que eu estou na pagina de login
   Quando deixo o campo de "Email" vazio
   E preencho o campo de "Senha" com "qwe123"
+  E clico em Entrar
   Entao deverei ver a mensagem de erro "É obrigatório informar o e-mail!"
 
 Cenario: Login com erro - e-mail inválido
@@ -30,6 +31,7 @@ Cenario: Login de usuario com erro - senha vazia
   Dado que eu estou na pagina de login
   Quando preencho o campo de "Email" com "teste@gmail.com"
   E deixo o campo de "Senha" vazio
+  E clico em Entrar
   Entao deverei ver a mensagem de erro "É obrigatório informar a senha!"
 
 Cenario: Cadastro de aluno com erro - senha inválida
