@@ -20,7 +20,3 @@ Então('deverei ver a pergunta na página de listagem de perguntas') do
   expect(page).to have_content('5')
   expect(page).to have_content('6')
 end
-
-Quando('deixo o campo {string} vazio') do |string|
-  fill_in string, :with => ""
-end
