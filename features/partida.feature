@@ -18,7 +18,7 @@ Cenário: Iniciar a partida e responder todas as questões corretamente
   E selecionei todas as alternativas corretas como resposta
   Quando cliquei em "finalizar"
   Então deverei ser redirecionado para a página "resultado"
-  Então deverei ver uma mensagem com a pontuação igual 1
+  Então deverei ver uma mensagem com a pontuação igual 5
 
 Cenário: Iniciar a partida e responder todas as questões incorretamente
   Dado que iniciei uma partida corretamente
@@ -27,3 +27,15 @@ Cenário: Iniciar a partida e responder todas as questões incorretamente
   Quando cliquei em "finalizar"
   Então deverei ser redirecionado para a página "resultado"
   Então deverei ver uma mensagem com a pontuação igual 0
+
+Cenário: Iniciar a partida e acertar três questões
+  Dado que iniciei uma partida corretamente
+  E recebi as questões do jogo
+  E selecionei na pergunta "1" a alternativa correta "1"
+  E selecionei na pergunta "2" a alternativa correta "1"
+  E selecionei na pergunta "3" a alternativa incorreta "4"
+  E selecionei na pergunta "4" a alternativa correta "3"
+  E selecionei na pergunta "5" a alternativa incorreta "3"
+  Quando cliquei em "finalizar"
+  Então deverei ser redirecionado para a página "resultado"
+  Então deverei ver uma mensagem com a pontuação igual 3
