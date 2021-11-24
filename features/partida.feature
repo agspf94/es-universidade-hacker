@@ -9,8 +9,8 @@ E ver meu desempenho no final.
 
 Cenário: Iniciar corretamente a partida
   Dado que estou no menu principal
-  Quando clico no botão "Jogar"
-  Então serei redirecionado para "partida"
+  Quando clico no botão "Novo Jogo"
+  Então serei redirecionado para "Partida"
 
 Cenário: Iniciar a partida e responder todas as questões corretamente
   Dado que iniciei uma partida corretamente

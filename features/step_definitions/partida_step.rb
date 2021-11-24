@@ -3,11 +3,11 @@ Dado('que estou no menu principal') do
 end
 
 Quando('clico no botão {string}') do |string|
-  click_on 'Novo Jogo'
+  click_on string
 end
 
 Então('serei redirecionado para {string}') do |string|
-  expect(page).to have_content 'Pergunta 1'
+  expect(page).to have_content string
 end
 
 Dado('que iniciei uma partida corretamente') do
