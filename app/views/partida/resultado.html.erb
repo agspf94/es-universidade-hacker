@@ -1,0 +1,19 @@
+<h1>Resultado</h1>
+<p>Pontuação: <%=
+  @pontuacao = params[:partida][:alternativas].to_i + params[:partida][:alternativas2].to_i + params[:partida][:alternativas3].to_i + params[:partida][:alternativas4].to_i + params[:partida][:alternativas5].to_i
+%></p><br>
+<%=link_to '<p class = "btn default">Menu Principal</p>'.html_safe, :controller => "menu_principal" %>
+<style>
+    .btn {
+        border: none;
+        background-color: #A9A9A9;
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    .btn:hover {background: #808080;}
+
+    .default {color: black;}
+</style>

@@ -1,5 +1,12 @@
+Dado('que eu tenho um usuário com "Email" cadastrado {string} e "Senha" cadastrada {string}') do |usuario_email, usuario_senha|
+  usuario = Usuario.new
+  usuario.email = usuario_email
+  usuario.senha = usuario_senha
+  usuario.save
+end
+
 Dado('que eu estou na pagina de login') do
-  visit '/login/new'
+  visit '/login'
 end
 
 Quando('preencho o campo de {string} com {string}') do |string, string2|
@@ -15,5 +22,13 @@ Entao('devo receber a mensagem {string}') do |string|
 end
 
 Quando('deixo o campo de {string} vazio') do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+  fill_in string, :with => ""
+end
+
+Quando('clico em Cadastrar-se') do
+  click_on 'Cadastrar-se'
+end
+
+Então('deverei ser redirecionado à página de cadastro') do
+  expect(page).to have_content('Novo usuario')
 end

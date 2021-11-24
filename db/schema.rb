@@ -10,6 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 2021_11_24_215806) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "partidas", force: :cascade do |t|
+    t.integer "pontuacao"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 ActiveRecord::Schema.define(version: 2021_11_10_194009) do
 
   # These are extensions that must be enabled in order to support this database
@@ -31,6 +41,7 @@ ActiveRecord::Schema.define(version: 2021_11_10_194009) do
     t.string "senha"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "bestscore"
   end
 
 end

@@ -1,7 +1,7 @@
 class MenuPrincipalController < ApplicationController
   def index
   end
-  def jogo
-    render 'jogo/index'
+  def partida
+    render 'partida/index'
   end
 end
