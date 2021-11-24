@@ -1,5 +1,3 @@
-<h1>Pergunta 1</h1>
-<p>Enunciado</p><br>
 <!--<input type="radio" id="alternativa1" name="alternativas" value="alternativa2">-->
 <!--<label for="alternativa3">alternativa4</label><br>-->
 <!--<input type="radio" id="alternativa2" name="alternativas" value="alternativa2">-->
@@ -10,14 +8,33 @@
 <!--<label for="alternativa4">alternativa4</label><br>-->
 <%#=link_to '<p class = "btn default">Finalizar</p>'.html_safe,:action => "resultado", :answer => 12 %>
 <%= form_with scope: :partida, url: "/partida/resultado", local: true do |form| %>
-  <%= form.radio_button :alternativas, "1", id: "alternativa1", :checked => true %>
-  <%= form.label :alternativa1, "alternativa1", id: "alternativa1" %><br><br>
-  <%= form.radio_button :alternativas, "0", id: "alternativa2" %>
-  <%= form.label :alternativa2, "alternativa2", id: "alternativa2" %><br><br>
-  <%= form.radio_button :alternativas, "0", id: "alternativa3" %>
-  <%= form.label :alternativa3, "alternativa3", id: "alternativa3" %><br><br>
-  <%= form.radio_button :alternativas, "0", id: "alternativa4" %>
-  <%= form.label :alternativa4, "alternativa4", id: "alternativa4" %><br><br>
+
+  <fieldset id="P1">
+    <h1>Pergunta 1</h1>
+    <p>Enunciado</p><br>
+    <%= form.radio_button :alternativas, "1", id: "P1alternativa1", :checked => true%>
+    <%= form.label :alternativa1, "alternativa1", id: "alternativa1" %><br><br>
+    <%= form.radio_button :alternativas, "0", id: "P1alternativa2"%>
+    <%= form.label :alternativa2, "alternativa2", id: "alternativa2" %><br><br>
+    <%= form.radio_button :alternativas, "0", id: "P1alternativa3"%>
+    <%= form.label :alternativa3, "alternativa3", id: "alternativa3" %><br><br>
+    <%= form.radio_button :alternativas, "0", id: "P1alternativa4"%>
+    <%= form.label :alternativa4, "alternativa4", id: "alternativa4" %><br><br>
+  </fieldset>
+  <br><br>
+
+  <fieldset id="P2">
+    <h1>Pergunta 2</h1>
+    <p>Enunciado</p><br>
+    <%= form.radio_button :alternativas2, "1", id: "P2alternativa1", :checked => true%>
+    <%= form.label :alternativa1, "alternativa1", id: "alternativa1" %><br><br>
+    <%= form.radio_button :alternativas2, "0", id: "P2alternativa2"%>
+    <%= form.label :alternativa2, "alternativa2", id: "alternativa2" %><br><br>
+    <%= form.radio_button :alternativas2, "0", id: "P2alternativa3"%>
+    <%= form.label :alternativa3, "alternativa3", id: "alternativa3" %><br><br>
+    <%= form.radio_button :alternativas2, "0", id: "P2alternativa4"%>
+    <%= form.label :alternativa4, "alternativa4", id: "alternativa4" %><br><br>
+  </fieldset>
   <%= form.submit "Finalizar" %>
 <% end %>
 <style>

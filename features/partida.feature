@@ -12,18 +12,18 @@ Cenário: Iniciar corretamente a partida
   Quando clico no botão "Jogar"
   Então serei redirecionado para "partida"
 
-Cenário: Iniciar a partida e responder a questão corretamente
+Cenário: Iniciar a partida e responder todas as questões corretamente
   Dado que iniciei uma partida corretamente
-  E recebi a primeira questão do jogo
-  E selecionei a alternativa correta como resposta
+  E recebi as questões do jogo
+  E selecionei todas as alternativas corretas como resposta
   Quando cliquei em "finalizar"
   Então deverei ser redirecionado para a página "resultado"
   Então deverei ver uma mensagem com a pontuação igual 1
 
-Cenário: Iniciar a partida e responder a questão incorretamente
+Cenário: Iniciar a partida e responder todas as questões incorretamente
   Dado que iniciei uma partida corretamente
-  E recebi a primeira questão do jogo
-  E selecionei uma alternativa incorreta como resposta
+  E recebi as questões do jogo
+  E selecionei todas as alternativas incorretas como resposta
   Quando cliquei em "finalizar"
   Então deverei ser redirecionado para a página "resultado"
   Então deverei ver uma mensagem com a pontuação igual 0

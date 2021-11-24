@@ -14,12 +14,13 @@ Dado('que iniciei uma partida corretamente') do
   visit '/partida'
 end
 
-Dado('recebi a primeira questão do jogo') do
+Dado('recebi as questões do jogo') do
   expect(page).to have_content 'Enunciado'
 end
 
-Dado('selecionei a alternativa correta como resposta') do
-  choose("alternativa1")
+Dado('selecionei todas as alternativas corretas como resposta') do
+  choose("P1alternativa1") and
+    choose("P2alternativa1")
 end
 
 Quando('cliquei em {string}') do |string|
@@ -34,6 +35,7 @@ Então('deverei ver uma mensagem com a pontuação igual {int}') do |int|
   expect(page).to have_content "Pontuacao: #{int}"
 end
 
-Dado('selecionei uma alternativa incorreta como resposta') do
-  choose("alternativa2")
+Dado('selecionei todas as alternativas incorretas como resposta') do
+  choose("P1alternativa2") and
+    choose("P2alternativa2")
 end
