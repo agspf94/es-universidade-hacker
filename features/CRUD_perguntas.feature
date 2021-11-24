@@ -21,15 +21,39 @@ Cenário: Cadastro de pergunta com erro - sem nenhuma alternativa
   Dado que estou na página de cadastro de pergunta
   Quando preencho o campo "Enunciado" com "1"
   E deixo o campo "Alternativa a" vazio
+  E clico em salvar
+  Então deverei ver a mensagem de erro "É obrigatório informar a alternativa A!"
+
+Cenário: Cadastro de pergunta com erro - sem nenhuma alternativa
+  Dado que estou na página de cadastro de pergunta
+  Quando preencho o campo "Enunciado" com "1"
   E deixo o campo "Alternativa b" vazio
+  E clico em salvar
+  Então deverei ver a mensagem de erro "É obrigatório informar a alternativa B!"
+
+Cenário: Cadastro de pergunta com erro - sem nenhuma alternativa
+  Dado que estou na página de cadastro de pergunta
+  Quando preencho o campo "Enunciado" com "1"
   E deixo o campo "Alternativa c" vazio
+  E clico em salvar
+  Então deverei ver a mensagem de erro "É obrigatório informar a alternativa C!"
+
+Cenário: Cadastro de pergunta com erro - sem nenhuma alternativa
+  Dado que estou na página de cadastro de pergunta
+  Quando preencho o campo "Enunciado" com "1"
   E deixo o campo "Alternativa d" vazio
+  E clico em salvar
+  Então deverei ver a mensagem de erro "É obrigatório informar a alternativa D!"
+
+Cenário: Cadastro de pergunta com erro - sem nenhuma alternativa
+  Dado que estou na página de cadastro de pergunta
+  Quando preencho o campo "Enunciado" com "1"
   E deixo o campo "Alternativa correta" vazio
   E clico em salvar
-  Então deverei ver a mensagem de erro "É obrigatório preencher todas as alternativas!"
+  Então deverei ver a mensagem de erro "É obrigatório informar a alternativa correta!"
 
 Cenário: Cadastro de pergunta com erro - sem enunciado
   Dado que estou na página de cadastro de pergunta
   E deixo o campo "Enunciado" vazio
   E clico em salvar
-  Então deverei ver a mensagem de erro "É obrigatório preencher o enunciado!"
+  Então deverei ver a mensagem de erro "É obrigatório informar o enunciado!"
