@@ -12,4 +12,9 @@ Rails.application.routes.draw do
   get '/login/is_user' => 'login#is_user'
   post '/login/create' => 'login#create'
   root 'login#index'
+
+  resources :perguntas, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+  get 'perguntas/:id/edit', to: 'perguntas#edit', as: :edit_perguntas
+  patch 'perguntas/:id', to: 'perguntas#update'
+
 end

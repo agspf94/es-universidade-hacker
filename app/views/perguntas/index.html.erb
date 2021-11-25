@@ -1,0 +1,48 @@
+<% @perguntas.each do |p| %>
+  <tr>
+    <td>
+      <h2> - Enunciado - </h2>
+      <%= p.enunciado %>
+    </td>
+    <br>
+
+    <td>
+      <h3> Alternativa A </h3>
+      <%= p.alternativa_a %>
+    </td>
+    <br>
+
+    <td>
+      <h3> Alternativa B </h3>
+      <%= p.alternativa_b %>
+    </td>
+    <br>
+
+    <td>
+      <h3> Alternativa C </h3>
+      <%= p.alternativa_c %>
+    </td>
+    <br>
+
+    <td>
+      <h3> Alternativa D </h3>
+      <%= p.alternativa_d %>
+    </td>
+    <br>
+
+    <td>
+      <h3> Resposta </h3>
+      <%= p.alternativa_correta %>
+    </td>
+
+    <br>  <br>  <br>
+    <%= link_to "Delete", p, method: :delete, data: {confirm: "Deseja apagar o enunciado?"} %>
+    <br>
+    <%= link_to "Edit", '/perguntas/' + p.id.to_s + '/edit' %>
+
+    <br>
+    ----------------------------------------------------------------------------------
+
+  </tr>
+
+<% end %>
