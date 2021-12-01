@@ -1,6 +1,6 @@
 #language: pt
 
-Funcionalidade: Jogar uma partida com 1 questão e ver meu desempenho
+Funcionalidade: Jogar uma partida com 5 questões e ver meu desempenho
 Como jogador,
 Após efetuar o login na plataforma
 Ao clicar no botão Jogar do menu principal
@@ -14,6 +14,8 @@ Cenário: Iniciar corretamente a partida
 
 Cenário: Iniciar a partida e responder todas as questões corretamente
   Dado que iniciei uma partida corretamente
+  E cadastrei perguntas suficientes no banco
+  E tenho perguntas suficientes cadastradas no banco
   E recebi as questões do jogo
   E selecionei todas as alternativas corretas como resposta
   Quando cliquei em "finalizar"
@@ -22,6 +24,8 @@ Cenário: Iniciar a partida e responder todas as questões corretamente
 
 Cenário: Iniciar a partida e responder todas as questões incorretamente
   Dado que iniciei uma partida corretamente
+  E cadastrei perguntas suficientes no banco
+  E tenho perguntas suficientes cadastradas no banco
   E recebi as questões do jogo
   E selecionei todas as alternativas incorretas como resposta
   Quando cliquei em "finalizar"
@@ -30,6 +34,8 @@ Cenário: Iniciar a partida e responder todas as questões incorretamente
 
 Cenário: Iniciar a partida e acertar três questões
   Dado que iniciei uma partida corretamente
+  E cadastrei perguntas suficientes no banco
+  E tenho perguntas suficientes cadastradas no banco
   E recebi as questões do jogo
   E selecionei na pergunta "1" a alternativa correta "1"
   E selecionei na pergunta "2" a alternativa correta "1"
