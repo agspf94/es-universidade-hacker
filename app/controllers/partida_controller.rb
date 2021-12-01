@@ -6,6 +6,21 @@ class PartidaController < ApplicationController
     @partida = Partida.new(partida_params)
     @partida.save
   end
+
+  def index
+    perguntas = Perguntas.select(:id, :enunciado, :alternativa_a, :alternativa_b, :alternativa_c, :alternativa_d, :alternativa_correta)
+    num_perguntas = Perguntas.count(:id)
+    a = (0..num_perguntas-1).to_a.shuffle
+    @perguntas_quiz = Array.new(5)
+    begin
+      for i in 0..4 do
+        @perguntas_quiz[i] = perguntas[a.pop]
+      end
+    rescue
+      render 'menu_principal/index'
+    end
+  end
+
   def pontuacao
     @partida = Partida.find(params[:id])
   end

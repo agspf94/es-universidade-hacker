@@ -9,13 +9,15 @@ E ver meu desempenho no final.
 
 Cenário: Iniciar corretamente a partida
   Dado que estou no menu principal
+  E cadastrei perguntas suficientes no banco
+  E tenho perguntas suficientes cadastradas no banco
   Quando clico no botão "Novo Jogo"
   Então serei redirecionado para "Partida"
 
 Cenário: Iniciar a partida e responder todas as questões corretamente
-  Dado que iniciei uma partida corretamente
-  E cadastrei perguntas suficientes no banco
+  Dado cadastrei perguntas suficientes no banco
   E tenho perguntas suficientes cadastradas no banco
+  E que iniciei uma partida corretamente
   E recebi as questões do jogo
   E selecionei todas as alternativas corretas como resposta
   Quando cliquei em "finalizar"
@@ -23,9 +25,9 @@ Cenário: Iniciar a partida e responder todas as questões corretamente
   Então deverei ver uma mensagem com a pontuação igual 5
 
 Cenário: Iniciar a partida e responder todas as questões incorretamente
-  Dado que iniciei uma partida corretamente
-  E cadastrei perguntas suficientes no banco
+  Dado cadastrei perguntas suficientes no banco
   E tenho perguntas suficientes cadastradas no banco
+  E que iniciei uma partida corretamente
   E recebi as questões do jogo
   E selecionei todas as alternativas incorretas como resposta
   Quando cliquei em "finalizar"
@@ -33,9 +35,9 @@ Cenário: Iniciar a partida e responder todas as questões incorretamente
   Então deverei ver uma mensagem com a pontuação igual 0
 
 Cenário: Iniciar a partida e acertar três questões
-  Dado que iniciei uma partida corretamente
-  E cadastrei perguntas suficientes no banco
+  Dado cadastrei perguntas suficientes no banco
   E tenho perguntas suficientes cadastradas no banco
+  E que iniciei uma partida corretamente
   E recebi as questões do jogo
   E selecionei na pergunta "1" a alternativa correta "1"
   E selecionei na pergunta "2" a alternativa correta "1"
