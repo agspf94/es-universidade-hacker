@@ -15,6 +15,7 @@ class PartidaController < ApplicationController
     begin
       for i in 0..4 do
         @perguntas_quiz[i] = perguntas[a.pop]
+        @cont_pergunta = 1
       end
     rescue
       render 'menu_principal/index'

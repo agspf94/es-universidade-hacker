@@ -17,7 +17,6 @@ Cenário: Acessando o jogo com perguntas insuficientes
   Quando clico em jogar
   Então devo permanecer na página de menu principal
 
-
   Cenário: Saindo do Sistema
   Dado que estou na página de menu principal
   Quando clico em sair

@@ -25,7 +25,7 @@ Dado('cadastrei perguntas suficientes no banco') do
   perguntas1.save
 
   perguntas2 = Perguntas.new
-  perguntas2.enunciado = "Responda a"
+  perguntas2.enunciado = "Responda a, por favor"
   perguntas2.alternativa_a = "Alternativa 1"
   perguntas2.alternativa_b = "Alternativa 2"
   perguntas2.alternativa_c = "Alternativa 3"
@@ -67,7 +67,11 @@ Dado('tenho perguntas suficientes cadastradas no banco') do
 end
 
 Dado('recebi as questões do jogo') do
-  expect(page).to have_content 'Enunciado'
+  expect(page).to have_content 'Pergunta 1' and
+    expect(page).to have_content 'Pergunta 2' and
+    expect(page).to have_content 'Pergunta 3' and
+    expect(page).to have_content 'Pergunta 4' and
+    expect(page).to have_content 'Pergunta 5'
 end
 
 Dado('selecionei todas as alternativas corretas como resposta') do

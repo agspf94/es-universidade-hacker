@@ -65,7 +65,7 @@ Quando('clico em jogar') do
 end
 
 Então('devo ser redirecionado para a página inicial do jogo') do
-  expect(page).to have_content 'Pergunta 1'
+  expect(page).to have_content 'Partida'
 end
 
 Então('devo permanecer na página de menu principal') do
