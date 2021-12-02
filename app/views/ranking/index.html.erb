@@ -1,8 +1,8 @@
 <h1>Ranking</h1>
 <li>
-  <ul><b>1. </b><%= Usuario.select(:email).order(bestscore: :desc)[0][:email] %></ul>
-  <ul><b>2. </b><%= Usuario.select(:email).order(bestscore: :desc)[1][:email] %></ul>
-  <ul><b>3. </b><%= Usuario.select(:email).order(bestscore: :desc)[2][:email] %></ul>
+  <ul><b>1. </b><%= @usuarios[0] %></ul>
+  <ul><b>2. </b><%= @usuarios[1] %></ul>
+  <ul><b>3. </b><%= @usuarios[2] %></ul>
 </li>
 <%=link_to '<p class = "btn default">Menu Principal</p>'.html_safe, :controller => "menu_principal" %>
 <br>

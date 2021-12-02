@@ -4,8 +4,7 @@ Então('devo visualizar uma lista com {int} jogadores') do |int|
   expect(page).to have_content "3."
 end
 
-Quando('acesso a pagina  {string}') do |string|
-  # visit "/ranking"
-  pending
+Quando('acesso a pagina {string}') do |string|
+  visit "/ranking"
 end
 

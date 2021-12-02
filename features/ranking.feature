@@ -8,10 +8,10 @@ Funcionalidade: criar um Ranking com os 3 jogadores com a maior pontuação
 
   Cenário: Acessar o Ranking com sucesso
     Dado que estou no menu principal
-    Quando acesso a pagina  "/ranking"
+    Quando acesso a pagina "/ranking"
     Então serei redirecionado para "Ranking"
 
   Cenário: Visualizar Ranking com as 3 maiores pontuações
     Dado que estou no menu principal
-    Quando acesso a pagina  "/ranking"
+    Quando acesso a pagina "/ranking"
     Então devo visualizar uma lista com 3 jogadores
