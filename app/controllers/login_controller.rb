@@ -12,6 +12,7 @@ class LoginController < ApplicationController
       #Model.find_by(name: "Bob")
       if usuario
         if usuario.senha == usuario_params[:senha]
+          session[:usuario_id] = usuario.id
           redirect_to menu_principal_index_path
         else
           render js: "Email/Senha inválido!"
