@@ -1,5 +1,4 @@
-class UsuariosController <
-      session[:usuario_id] = @usuario.id ApplicationController
+class UsuariosController < ApplicationController
   def new
     @usuario = Usuario.new
   end
