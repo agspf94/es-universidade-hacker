@@ -12,7 +12,7 @@ Cenário: Cadastro de pergunta com sucesso
   Quando preencho o campo "Alternativa b" com "3"
   Quando preencho o campo "Alternativa c" com "4"
   Quando preencho o campo "Alternativa d" com "5"
-  Quando preencho o campo "Alternativa correta" com "6"
+  Quando escolho no campo "Alternativa correta" o valor "Alternativa A"
   E clico em salvar
   Então ela deve ter sido salva no banco de dados
   E deverei ver a pergunta na página de listagem de perguntas
@@ -48,7 +48,7 @@ Cenário: Cadastro de pergunta com erro - sem nenhuma alternativa
 Cenário: Cadastro de pergunta com erro - sem nenhuma alternativa
   Dado que estou na página de cadastro de pergunta
   Quando preencho o campo "Enunciado" com "1"
-  E deixo o campo "Alternativa correta" vazio
+  E não escolho uma opção no campo "Alternativa correta"
   E clico em salvar
   Então deverei ver a mensagem de erro "É obrigatório informar a alternativa correta!"
 
