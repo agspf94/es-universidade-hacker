@@ -75,11 +75,14 @@ Dado('recebi as questões do jogo') do
 end
 
 Dado('selecionei todas as alternativas corretas como resposta') do
-  choose("P1alternativa1") and
-    choose("P2alternativa1") and
-    choose("P3alternativa2") and
-    choose("P4alternativa3") and
-    choose("P5alternativa4")
+  for i in 1..5 do
+    for j in 1..4 do
+      if find_field("P" + i.to_s + "alternativa" + j.to_s).value == "1"
+        choose("P" + i.to_s + "alternativa" + j.to_s)
+        break
+      end
+    end
+  end
 end
 
 Quando('cliquei em {string}') do |string|
@@ -95,17 +98,30 @@ Então('deverei ver uma mensagem com a pontuação igual {int}') do |int|
 end
 
 Dado('selecionei todas as alternativas incorretas como resposta') do
-  choose("P1alternativa4") and
-    choose("P2alternativa4") and
-    choose("P3alternativa3") and
-    choose("P4alternativa2") and
-    choose("P5alternativa1")
+  for i in 1..5 do
+    for j in 1..4 do
+      if find_field("P" + i.to_s + "alternativa" + j.to_s).value == "0"
+        choose("P" + i.to_s + "alternativa" + j.to_s)
+        break
+      end
+    end
+  end
 end
 
-Dado('selecionei na pergunta {string} a alternativa correta {string}') do |string1, string2|
-  choose("P" + string1 + "alternativa" + string2)
+Dado('selecionei na pergunta {string} a alternativa correta') do |string|
+  for i in 1..4 do
+    if find_field("P" + string + "alternativa" + i.to_s).value == "1"
+      choose("P" + string + "alternativa" + i.to_s)
+      break
+    end
+  end
 end
 
-Dado('selecionei na pergunta {string} a alternativa incorreta {string}') do |string1, string2|
-  choose("P" + string1 + "alternativa" + string2)
+Dado('selecionei na pergunta {string} a alternativa incorreta') do |string|
+  for i in 1..4 do
+    if find_field("P" + string + "alternativa" + i.to_s).value == "0"
+      choose("P" + string + "alternativa" + i.to_s)
+      break
+    end
+  end
 end

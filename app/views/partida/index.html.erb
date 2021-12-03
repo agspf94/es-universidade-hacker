@@ -4,13 +4,13 @@
     <fieldset>
       <h1>Pergunta <%= @cont_pergunta %></h1>
       <p><%= pergunta.enunciado %></p><br>
-      <%= form.radio_button @cont_pergunta.to_s, pergunta.alternativa_correta == "a" ? 1 : 0, id: "P" + @cont_pergunta.to_s + "alternativa1", :checked => true%>
+      <%= form.radio_button "alternativas" + @cont_pergunta.to_s, pergunta.alternativa_correta == "a" ? 1 : 0, id: "P" + @cont_pergunta.to_s + "alternativa1", :checked => true%>
       <%= form.label :alternativa1, "#{pergunta.alternativa_a}", id: "alternativa1" %><br><br>
-      <%= form.radio_button @cont_pergunta.to_s, pergunta.alternativa_correta == "b" ? 1 : 0, id: "P" + @cont_pergunta.to_s + "alternativa2"%>
+      <%= form.radio_button "alternativas" + @cont_pergunta.to_s, pergunta.alternativa_correta == "b" ? 1 : 0, id: "P" + @cont_pergunta.to_s + "alternativa2"%>
       <%= form.label :alternativa2, "#{pergunta.alternativa_b}", id: "alternativa2" %><br><br>
-      <%= form.radio_button @cont_pergunta.to_s, pergunta.alternativa_correta == "c" ? 1 : 0, id: "P" + @cont_pergunta.to_s + "alternativa3"%>
+      <%= form.radio_button "alternativas" + @cont_pergunta.to_s, pergunta.alternativa_correta == "c" ? 1 : 0, id: "P" + @cont_pergunta.to_s + "alternativa3"%>
       <%= form.label :alternativa3, "#{pergunta.alternativa_c}", id: "alternativa3" %><br><br>
-      <%= form.radio_button @cont_pergunta.to_s, pergunta.alternativa_correta == "d" ? 1 : 0, id: "P" + @cont_pergunta.to_s + "alternativa4"%>
+      <%= form.radio_button "alternativas" + @cont_pergunta.to_s, pergunta.alternativa_correta == "d" ? 1 : 0, id: "P" + @cont_pergunta.to_s + "alternativa4"%>
       <%= form.label :alternativa4, "#{pergunta.alternativa_d}", id: "alternativa4" %><br><br>
     </fieldset>
     <br><br>

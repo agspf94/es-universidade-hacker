@@ -39,11 +39,11 @@ Cenário: Iniciar a partida e acertar três questões
   E tenho perguntas suficientes cadastradas no banco
   E que iniciei uma partida corretamente
   E recebi as questões do jogo
-  E selecionei na pergunta "1" a alternativa correta "1"
-  E selecionei na pergunta "2" a alternativa correta "1"
-  E selecionei na pergunta "3" a alternativa incorreta "4"
-  E selecionei na pergunta "4" a alternativa correta "3"
-  E selecionei na pergunta "5" a alternativa incorreta "3"
+  E selecionei na pergunta "1" a alternativa correta
+  E selecionei na pergunta "2" a alternativa correta
+  E selecionei na pergunta "3" a alternativa incorreta
+  E selecionei na pergunta "4" a alternativa correta
+  E selecionei na pergunta "5" a alternativa incorreta
   Quando cliquei em "finalizar"
   Então deverei ser redirecionado para a página "resultado"
   Então deverei ver uma mensagem com a pontuação igual 3
