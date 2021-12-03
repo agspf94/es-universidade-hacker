@@ -18,32 +18,32 @@
 
   <p>
     <%= form.label :enunciado %><br>
-    <%= form.text_field :enunciado %>
+    <%= form.text_area :enunciado %>
   </p>
 
   <p>
     <%= form.label :alternativa_a %><br>
-    <%= form.text_field :alternativa_a %>
+    <%= form.text_area :alternativa_a %>
   </p>
 
   <p>
     <%= form.label :alternativa_b %><br>
-    <%= form.text_field :alternativa_b %>
+    <%= form.text_area :alternativa_b %>
   </p>
 
   <p>
     <%= form.label :alternativa_c %><br>
-    <%= form.text_field :alternativa_c %>
+    <%= form.text_area :alternativa_c %>
   </p>
 
   <p>
     <%= form.label :alternativa_d %><br>
-    <%= form.text_field :alternativa_d %>
+    <%= form.text_area :alternativa_d %>
   </p>
 
   <p>
     <%= form.label :alternativa_correta %><br>
-    <%= form.text_field :alternativa_correta %>
+    <%= form.select :alternativa_correta, [['Escolha uma opção', ''], ['Alternativa A', 'a'], ['Alternativa B', 'b'], ['Alternativa C', 'c'], ['Alternativa D', 'd']] %>
   </p>
 
   <p>
