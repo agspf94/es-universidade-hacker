@@ -18,7 +18,7 @@ class PartidaController < ApplicationController
         @cont_pergunta = 1
       end
     rescue
-      render 'menu_principal/index'
+      redirect_to menu_principal_index_path
     end
   end
 
