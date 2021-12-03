@@ -1,6 +1,6 @@
 <h1>Resultado</h1>
 <p>Pontuação: <%=
-  @pontuacao = params[:partida][:alternativas].to_i + params[:partida][:alternativas2].to_i + params[:partida][:alternativas3].to_i + params[:partida][:alternativas4].to_i + params[:partida][:alternativas5].to_i
+  @pontuacao = params[:partida]["alternativas1"].to_i + params[:partida]["alternativas2"].to_i + params[:partida]["alternativas3"].to_i + params[:partida]["alternativas4"].to_i + params[:partida]["alternativas5"].to_i
 %></p><br>
 <%=link_to '<p class = "btn default">Menu Principal</p>'.html_safe, :controller => "menu_principal" %>
 <style>

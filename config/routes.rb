@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :ranking
   resources :usuarios
   resources :menu_principal
   resources :partida, only: [:index] do
@@ -17,4 +16,5 @@ Rails.application.routes.draw do
   get 'perguntas/:id/edit', to: 'perguntas#edit', as: :edit_perguntas
   patch 'perguntas/:id', to: 'perguntas#update'
 
+  resources :ranking
 end

@@ -14,16 +14,9 @@ Dado('que iniciei uma partida corretamente') do
   visit '/partida'
 end
 
-Dado('recebi as questões do jogo') do
-  expect(page).to have_content 'Enunciado'
-end
-
-Dado('selecionei todas as alternativas corretas como resposta') do
-  choose("P1alternativa1") and
-    choose("P2alternativa1") and
-    choose("P3alternativa2") and
-    choose("P4alternativa3") and
-    choose("P5alternativa4")
+Dado('tenho perguntas suficientes cadastradas no banco') do
+  num_perguntas = Perguntas.count(:id)
+  expect(num_perguntas).to be >= 5
 end
 
 Quando('cliquei em {string}') do |string|
@@ -38,18 +31,17 @@ Então('deverei ver uma mensagem com a pontuação igual {int}') do |int|
   expect(page).to have_content "Pontuação: #{int}"
 end
 
-Dado('selecionei todas as alternativas incorretas como resposta') do
-  choose("P1alternativa4") and
-    choose("P2alternativa4") and
-    choose("P3alternativa3") and
-    choose("P4alternativa2") and
-    choose("P5alternativa1")
-end
-
-Dado('selecionei na pergunta {string} a alternativa correta {string}') do |string1, string2|
-  choose("P" + string1 + "alternativa" + string2)
-end
-
-Dado('selecionei na pergunta {string} a alternativa incorreta {string}') do |string1, string2|
-  choose("P" + string1 + "alternativa" + string2)
+Dado('selecionei na pergunta {string} a alternativa {string}') do |string1, string2|
+  resp = ""
+  if string2 == "incorreta"
+    resp = "0"
+  elsif string2 == "correta"
+    resp = "1"
+  end
+  for i in 1..4 do
+    if find_field("P" + string1 + "alternativa" + i.to_s).value == resp
+      choose("P" + string1 + "alternativa" + i.to_s)
+      break
+    end
+  end
 end

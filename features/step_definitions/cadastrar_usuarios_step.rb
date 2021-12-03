@@ -6,6 +6,10 @@ Quando('preencho o campo {string} com {string}') do |string, string2|
   fill_in string, :with => string2
 end
 
+Quando('escolho no campo {string} o valor {string}') do |string, string2|
+  select string2, from: string
+end
+
 Quando('clico em salvar') do
   click_on 'Salvar'
 end
@@ -23,6 +27,10 @@ end
 
 Quando('deixo o campo {string} vazio') do |string|
   fill_in string, :with => ""
+end
+
+Quando('não escolho uma opção no campo {string}') do |string|
+  select 'Escolha uma opção', from: string
 end
 
 Então('deverei ver a mensagem de erro {string}') do |string|
