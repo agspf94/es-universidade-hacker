@@ -13,7 +13,7 @@ Dado('possuo questões suficientes cadastradas') do
   perguntas1.save
 
   perguntas2 = Perguntas.new
-  perguntas2.enunciado = "Responda a"
+  perguntas2.enunciado = "Responda a, por favor"
   perguntas2.alternativa_a = "Alternativa 1"
   perguntas2.alternativa_b = "Alternativa 2"
   perguntas2.alternativa_c = "Alternativa 3"
