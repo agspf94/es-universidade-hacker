@@ -1,16 +1,22 @@
 <h1>Ranking</h1>
-<li>
-  <ul><b>1. </b><%= @usuarios[0] %></ul>
-  <ul><b>2. </b><%= @usuarios[1] %></ul>
-  <ul><b>3. </b><%= @usuarios[2] %></ul>
-  <ul><b>4. </b><%= @usuarios[3] %></ul>
-  <ul><b>5. </b><%= @usuarios[4] %></ul>
-  <ul><b>6. </b><%= @usuarios[5] %></ul>
-  <ul><b>7. </b><%= @usuarios[6] %></ul>
-  <ul><b>8. </b><%= @usuarios[7] %></ul>
-  <ul><b>9. </b><%= @usuarios[8] %></ul>
-  <ul><b>10. </b><%= @usuarios[9] %></ul>
-</li>
+<% @usuarios.first(10).each_with_index do |usuario, index|%>
+  <li>
+    <% if usuario[0].nil? %>
+      <ul><b><%= index + 1 %>. </b><%= usuario[1] %></ul>
+    <% else %>
+      <ul><b><%= index + 1 %>. </b><%= usuario[0] %></ul>
+    <% end %>
+<!--  <ul><b>2. </b><%#= @usuarios[1] %></ul>-->
+<!--  <ul><b>3. </b><%#= @usuarios[2] %></ul>-->
+<!--  <ul><b>4. </b><%#= @usuarios[3] %></ul>-->
+<!--  <ul><b>5. </b><%#= @usuarios[4] %></ul>-->
+<!--  <ul><b>6. </b><%#= @usuarios[5] %></ul>-->
+<!--  <ul><b>7. </b><%#= @usuarios[6] %></ul>-->
+<!--  <ul><b>8. </b><%#= @usuarios[7] %></ul>-->
+<!--  <ul><b>9. </b><%#= @usuarios[8] %></ul>-->
+<!--  <ul><b>10. </b><%#= @usuarios[9] %></ul>-->
+  </li>
+<% end %>
 <%=link_to '<p class = "btn default">Menu Principal</p>'.html_safe, :controller => "menu_principal" %>
 <br>
 <style>
