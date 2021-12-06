@@ -1,6 +1,7 @@
-Dado('que eu tenho um usuário com "Email" cadastrado {string} e "Senha" cadastrada {string}') do |usuario_email, usuario_senha|
+Dado('que eu tenho um usuário com "Email" cadastrado {string} e "Senha" cadastrada {string} e "Nome" cadastrado {string}') do |usuario_email, usuario_senha, usuario_nome |
   usuario = Usuario.new
   usuario.email = usuario_email
+  usuario.nome = usuario_nome
   usuario.senha = usuario_senha
   usuario.save
 end
@@ -32,3 +33,4 @@ end
 Então('deverei ser redirecionado à página de cadastro') do
   expect(page).to have_content('Novo usuario')
 end
+

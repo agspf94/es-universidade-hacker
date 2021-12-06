@@ -17,11 +17,13 @@ end
 Então('ele deve ter sido salvo no banco de dados') do
   usuario = Usuario.order("id").last
   expect(usuario.email).to eq('miguel.vasconcelos@usp.br')
+  expect(usuario.nome).to eq('ronaldo')
   expect(usuario.senha).to eq('123456')
 end
 
 Então('deverei ver o usuário na página de listagem de usuários') do
   expect(page).to have_content('miguel.vasconcelos@usp.br')
+  expect(page).to have_content('ronaldo')
   expect(page).to have_content('123456')
 end
 

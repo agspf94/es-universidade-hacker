@@ -14,4 +14,4 @@ Funcionalidade: criar um Ranking com os 10 jogadores com a maior pontuação
   Cenário: Visualizar Ranking com as 10 maiores pontuações
     Dado que estou no menu principal
     Quando acesso a pagina "/ranking"
-    Então devo visualizar uma lista com 10 jogadores
+    Então devo visualizar uma lista com jogadores
