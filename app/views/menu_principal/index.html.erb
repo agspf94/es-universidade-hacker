@@ -1,5 +1,6 @@
 <h1>Menu Principal</h1>
-<p><b>Seja bem vindo(a): </b><%= @usuario %></p>
+
+  <p><b>Seja bem vindo(a): </b><%= @usuario_display_text %></p>
 
 <%= link_to_if(@disable.nil?, "<p class = '#{@btnclass}'>Novo Jogo</p>".html_safe, { controller: "partida" }) %>
 <% if @disable == true %>

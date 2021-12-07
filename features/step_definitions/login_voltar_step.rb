@@ -1,7 +1,8 @@
-Dado('que cadastrei o usuário {string} com senha {string}') do |usuario_email, usuario_senha|
+Dado('que cadastrei o usuário {string} com senha {string} com nome {string}') do |usuario_email, usuario_senha, usuario_nome|
   usuario = Usuario.new
   usuario.email = usuario_email
   usuario.senha = usuario_senha
+  usuario.nome = usuario_nome
   usuario.save
 end
 
