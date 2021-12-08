@@ -4,6 +4,7 @@ class UsuariosController < ApplicationController
   end
   def create
     @usuario = Usuario.new(usuario_params)
+    @usuario.bestscore = 0
     if @usuario.save
       redirect_to @usuario
     else
@@ -15,6 +16,6 @@ class UsuariosController < ApplicationController
   end
   private
   def usuario_params
-    params.require(:usuario).permit(:email, :nome, :senha)
+    params.require(:usuario).permit(:email, :nome, :senha, :bestscore)
   end
 end
