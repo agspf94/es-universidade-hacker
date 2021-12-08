@@ -7,6 +7,24 @@ class PartidaController < ApplicationController
     @partida.save
   end
 
+  def resultado
+    if session[:usuario_id]
+      @usuario = Usuario.find(session[:usuario_id])
+    else
+      render 'Não foi possível encontrar usuário'
+    end
+
+    @res = "false"
+    @pontuacao = params[:partida]["alternativas1"].to_i + params[:partida]["alternativas2"].to_i + params[:partida]["alternativas3"].to_i + params[:partida]["alternativas4"].to_i + params[:partida]["alternativas5"].to_i
+
+
+    if @pontuacao > @usuario.bestscore
+      @usuario.update(email: @usuario.email, senha: @usuario.senha, bestscore: @pontuacao, nome: @usuario.nome)
+      @res = "true"
+    end
+
+  end
+
   def index
     perguntas = Perguntas.select(:id, :enunciado, :alternativa_a, :alternativa_b, :alternativa_c, :alternativa_d, :alternativa_correta)
     num_perguntas = Perguntas.count(:id)
