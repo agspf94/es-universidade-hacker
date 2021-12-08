@@ -1,8 +1,18 @@
-<h1>Resultado</h1>
+<% if @res == "true" %>
+  <h1>Novo recorde!</h1>
+<% end %>
+
+<% if @res == "false" %>
+  <h1>Não foi dessa vez!</h1>
+<% end %>
+<br>
+<h2>Resultado</h2>
 <p>Pontuação: <%=
-  @pontuacao = params[:partida]["alternativas1"].to_i + params[:partida]["alternativas2"].to_i + params[:partida]["alternativas3"].to_i + params[:partida]["alternativas4"].to_i + params[:partida]["alternativas5"].to_i
+  @pontuacao
 %></p><br>
+
 <%=link_to '<p class = "btn default">Menu Principal</p>'.html_safe, :controller => "menu_principal" %>
+
 <style>
     .btn {
         border: none;

@@ -1,13 +1,10 @@
-Dado('que eu estou na página do jogo') do
+Dado('que vou a pagina de jogo') do
   visit '/partida'
 end
 
 Dado('que eu tenho uma maior pontuação igual a {int}') do |bestscore|
-  usuario = Usuario.new
-  usuario.email = 'm@gmail.com'
-  usuario.senha = '1'
-  usuario.bestscore = bestscore
-  usuario.save
+  usuario = Usuario.order("created_at").last
+  usuario.update(email: usuario.email, senha: usuario.senha, bestscore: bestscore, nome: usuario.nome)
 end
 
 Quando('seleciono na pergunta {string} a alternativa correta {string}') do |string1, string2|

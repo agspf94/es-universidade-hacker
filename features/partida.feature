@@ -15,7 +15,9 @@ Cenário: Iniciar corretamente a partida
   Então serei redirecionado para "Partida"
 
 Cenário: Iniciar a partida e responder todas as questões corretamente
-  Dado possuo questões suficientes cadastradas
+  Dado que eu estou na pagina de login
+  E que loguei no sistema com sucesso com "Email" "mtqr1@gmail.com" e "Senha" "Tads"
+  E possuo questões suficientes cadastradas
   E tenho perguntas suficientes cadastradas no banco
   E que iniciei uma partida corretamente
   E selecionei na pergunta "1" a alternativa "correta"
@@ -23,12 +25,15 @@ Cenário: Iniciar a partida e responder todas as questões corretamente
   E selecionei na pergunta "3" a alternativa "correta"
   E selecionei na pergunta "4" a alternativa "correta"
   E selecionei na pergunta "5" a alternativa "correta"
+  E que eu tenho uma maior pontuação igual a 4
   Quando cliquei em "finalizar"
   Então deverei ser redirecionado para a página "resultado"
   Então deverei ver uma mensagem com a pontuação igual 5
 
 Cenário: Iniciar a partida e responder todas as questões incorretamente
-  Dado possuo questões suficientes cadastradas
+  Dado que eu estou na pagina de login
+  E que loguei no sistema com sucesso com "Email" "mtqr1@gmail.com" e "Senha" "Tads"
+  E possuo questões suficientes cadastradas
   E tenho perguntas suficientes cadastradas no banco
   E que iniciei uma partida corretamente
   E selecionei na pergunta "1" a alternativa "incorreta"
@@ -36,12 +41,15 @@ Cenário: Iniciar a partida e responder todas as questões incorretamente
   E selecionei na pergunta "3" a alternativa "incorreta"
   E selecionei na pergunta "4" a alternativa "incorreta"
   E selecionei na pergunta "5" a alternativa "incorreta"
+  E que eu tenho uma maior pontuação igual a 2
   Quando cliquei em "finalizar"
   Então deverei ser redirecionado para a página "resultado"
   Então deverei ver uma mensagem com a pontuação igual 0
 
 Cenário: Iniciar a partida e acertar três questões
-  Dado possuo questões suficientes cadastradas
+  Dado que eu estou na pagina de login
+  E que loguei no sistema com sucesso com "Email" "mtqr1@gmail.com" e "Senha" "Tads"
+  E possuo questões suficientes cadastradas
   E tenho perguntas suficientes cadastradas no banco
   E que iniciei uma partida corretamente
   E selecionei na pergunta "1" a alternativa "correta"
@@ -49,6 +57,7 @@ Cenário: Iniciar a partida e acertar três questões
   E selecionei na pergunta "3" a alternativa "incorreta"
   E selecionei na pergunta "4" a alternativa "correta"
   E selecionei na pergunta "5" a alternativa "incorreta"
+  E que eu tenho uma maior pontuação igual a 2
   Quando cliquei em "finalizar"
   Então deverei ser redirecionado para a página "resultado"
   Então deverei ver uma mensagem com a pontuação igual 3
